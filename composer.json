@@ -1,0 +1,29 @@
+{
+    "name": "bernardosecades/testing-test-doubles",
+    "description": "Test doubles with Prophesize and Mockery",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bernardosecades",
+            "email": "bernardosecades@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BernardoSecades\\Testing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9",
+        "phpunit/phpunit": "^5.3"
+    },
+    "require": {
+        "monolog/monolog": "^1.22",
+        "symfony/http-foundation": "^3.2"
+    }
+}
