@@ -1,12 +1,14 @@
 <?php
+declare(strict_types=1);
 
 namespace Tests\Unit\Dummy;
 
 use BernardoSecades\Testing\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Psr\Log\LoggerInterface;
+use PHPUnit\Framework\TestCase;
 
-class ControllerTest extends \PHPUnit_Framework_TestCase
+class ControllerTest extends TestCase
 {
     /**
      * Dummies are doubles with no behaviour.
