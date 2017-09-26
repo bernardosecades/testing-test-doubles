@@ -1,12 +1,14 @@
 <?php
+declare(strict_types=1);
 
 namespace Tests\Unit\Stubs;
 
 use BernardoSecades\Testing\ObserverPattern\Observer;
 use BernardoSecades\Testing\ObserverPattern\Subject;
 use Prophecy\Argument;
+use PHPUnit\Framework\TestCase;
 
-class SubjectTest extends \PHPUnit_Framework_TestCase
+class SubjectTest extends TestCase
 {
     /**
      * Are doubles pre-programmed with expectations which form a specification of the

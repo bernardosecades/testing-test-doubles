@@ -1,13 +1,15 @@
 <?php
+declare(strict_types=1);
 
 namespace Tests\Unit\Stubs;
 
 use BernardoSecades\Testing\Controller\Controller;
+use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-class ControllerTest extends \PHPUnit_Framework_TestCase
+class ControllerTest extends TestCase
 {
     /**
      * Are doubles that return output defined

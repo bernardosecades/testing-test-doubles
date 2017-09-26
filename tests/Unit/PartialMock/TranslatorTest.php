@@ -1,16 +1,19 @@
 <?php
+declare(strict_types=1);
 
 namespace Tests\Unit\PartialMock;
 
 use BernardoSecades\Testing\Translator\Translator;
+use PHPUnit\Framework\TestCase;
+
 use Mockery as m;
 
-class TranslatorTest extends \PHPUnit_Framework_TestCase
+class TranslatorTest extends TestCase
 {
     /**
-     * Frameworks like Mockery and Phake allow create partial mocks. Means call
-     * real method if is not especified in the mock.
-     * Important: In new code is not recommended use partail mock (Single Responsability)
+     * Frameworks like Mockery and Fake allow create partial mocks. Means call
+     * real method if is not specified in the mock.
+     * Important: In new code is not recommended use partial mock (Single Responsibility)
      *
      * @test
      */
