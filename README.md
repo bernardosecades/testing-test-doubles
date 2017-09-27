@@ -1,9 +1,8 @@
-# Testing. PHPUnit, Prophesize and Mockery to test doubles
+# Testing: Test doubles with Prophesize
 
 ## About
 
-In this repository we have some examples of differents type of test doubles with Prophesize. As well you can see 
-an example of Partial mock with Mockery.
+In this repository we have some examples of differents type of test doubles with Prophesize. 
 
 ## Types of test doubles
 
