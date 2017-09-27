@@ -1,6 +1,6 @@
 {
     "name": "bernardosecades/testing-test-doubles",
-    "description": "Test doubles with Prophesize and Mockery",
+    "description": "Test doubles with prophesize",
     "license": "MIT",
     "authors": [
         {
@@ -25,6 +25,7 @@
     "require": {
         "php" : ">=7.1",
         "monolog/monolog": "^1.23",
-        "symfony/http-foundation": "^3.2"
+        "symfony/http-foundation": "^3.2",
+        "doctrine/collections": "^1.5"
     }
 }
