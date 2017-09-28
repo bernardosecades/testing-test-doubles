@@ -5,6 +5,7 @@ namespace BernardoSecades\Testing\Legacy\Service;
 
 
 use BernardoSecades\Testing\Domain\Entity\Employed;
+use BernardoSecades\Testing\Domain\Entity\EmployersCollection;
 
 class CalculateSalaries
 {
@@ -14,38 +15,22 @@ class CalculateSalaries
      */
     public function calculateTotalSalaries(EmployersCollection $collection)
     {
-        $this->logInactiveEmployees($collection);
-        return $this->sumActiveEmployeesSalaries($collection);
-    }
+        $total = 0;
+        /** @var Employed $employed */
+        foreach ($collection as $employed) {
+            if (!$employed->isActive()) {
+                $this->log(sprintf('Employed %s is deactivated', $employed->getName()));
+                continue;
+            }
+            $total += $employed->getSalary();
+        }
 
-    protected function logInactiveEmployees($collection)
-    {
-        $inactiveEmployees = array_filter($collection, function ($employee) {
-            /**
-             * @var Employed $employee
-             */
-            return !$employee->isActive();
-        });
-        array_walk($inactiveEmployees, function ($employee) {
-            $this->log(sprintf('Employed %s is deactivated',
-                $employee->getName()));
-        });
+        return $total;
+
     }
 
     protected function log($message)
     {
         echo $message . PHP_EOL;
-    }
-
-    private function sumActiveEmployeesSalaries($collection)
-    {
-        $activeEmployees = array_filter($collection, function ($employee) {
-                return $employee->isActive();
-            });
-        $salaries = array_map(function($employee){
-            return $employee->getSalary();
-        }, $activeEmployees);
-
-        return array_sum($salaries);
     }
 }
