@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace BernardoSecades\Testing\Legacy\Service;
 
-
 use BernardoSecades\Testing\Domain\Entity\Employed;
 use BernardoSecades\Testing\Domain\Entity\EmployersCollection;
 

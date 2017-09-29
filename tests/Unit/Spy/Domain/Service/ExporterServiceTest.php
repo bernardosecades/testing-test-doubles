@@ -11,7 +11,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Doubles: Mock
+ * Doubles: Spy
  */
 class ExporterServiceTest extends TestCase
 {
